@@ -188,23 +188,3 @@ int main()
 	main7();
 	printf("포션의 X * Y = %d, 소드의 X * Y = %d", resultPotion, resultSword);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
