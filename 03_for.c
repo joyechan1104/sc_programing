@@ -4,17 +4,17 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	// ¼ıÀÚ ¼ø¼­´ë·Î Ãâ·ÂÇÏ±â 
+	// ìˆ«ì ìˆœì„œëŒ€ë¡œ ì¶œë ¥í•˜ê¸° 
 	int i=0;
 	while(i<=5) {
 		printf("%d \n", i);
 		i++; 
 	}
 	
-	// °è¼Ó ´õÇÏ±â Áß´ÜÀº0
+	// ê³„ì† ë”í•˜ê¸° ì¤‘ë‹¨ì€0
 	int input, total=0;
 	while(1){
-		printf("¼ıÀÚÀÔ·Â: ");
+		printf("ìˆ«ìì…ë ¥: ");
 		scanf("%d", &input);
 		if(input==0) {
 			break;
@@ -23,48 +23,48 @@ int main(int argc, char *argv[]) {
 			total += input;
 		}
 	} 
-	printf("ÇÕ = %d \n\n", total);
+	printf("í•© = %d \n\n", total);
 	
-	// ¹èÅÍ¸® ÀÜ·® °è»ê
+	// ë°°í„°ë¦¬ ì”ëŸ‰ ê³„ì‚°
 	int battery=0;
 	while(1) {
 		if (battery==100) {
-			printf("ÃæÀü%d ¿Ï·á \n", battery);
+			printf("ì¶©ì „%d ì™„ë£Œ \n", battery);
 			break;
 		}
 		else if(battery>=80) {
-			printf("ÃæÀü%d ´ÙµÊ \n", battery);
+			printf("ì¶©ì „%d ë‹¤ë¨ \n", battery);
 			battery++; 
 		}
 		else {
-			printf("ÃæÀü%d Áß \n", battery);
+			printf("ì¶©ì „%d ì¤‘ \n", battery);
 			battery+=3;
 		}
 	}
 	
-	// ¾ÆÆÄÆ® º§Æ¢
+	// ì•„íŒŒíŠ¸ ë²¨íŠ€
 	int floor = 1;
 	int room;
 	while (floor<10) {
 		int room = 1;
 		while (room<5) {
-			printf("%dÃş %dÈ£\n", floor, room);
+			printf("%dì¸µ %dí˜¸\n", floor, room);
 			room++;
 		}
-		printf("\n"); // ´ÙÀ½ÃşÀ¸·Î
+		printf("\n"); // ë‹¤ìŒì¸µìœ¼ë¡œ
 		floor++; 
 	} 
 	
-	// ¹İµµÃ¼ ¿şÀÌÆÛ ºÒ·®°Ë»ç
+	// ë°˜ë„ì²´ ì›¨ì´í¼ ë¶ˆëŸ‰ê²€ì‚¬
 	int row=1, conumn=1;
 	while (row<10) {
 		conumn=1;
 		while (conumn<10) {
 			if (row==7 && conumn==4) {
-				printf("%d¿­ %dÇà¿¡ ¿¡·¯ ¹ß»ı! \n", row, conumn);
+				printf("%dì—´ %dí–‰ì— ì—ëŸ¬ ë°œìƒ! \n", row, conumn);
 			}
 			else {
-				printf("%d¿­ %dÇà ÀÌ»ó¾øÀ½ \n", row, conumn);
+				printf("%dì—´ %dí–‰ ì´ìƒì—†ìŒ \n", row, conumn);
 			}
 			conumn++;
 		}
