@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//1 ±¸Á¶Ã¼ÀÇ ÁÂÇ¥Æò¸é 
+//1 êµ¬ì¡°ì²´ì˜ ì¢Œí‘œí‰ë©´ 
 struct item
 {
 	int xpos;
@@ -14,24 +14,24 @@ int resultSword = 0;
 int main1() 
 {
 	struct item potion, sword;
-	fputs("¾ÆÀÌÅÛ Æ÷¼Ç: ", stdout);
+	fputs("ì•„ì´í…œ í¬ì…˜: ", stdout);
 	scanf("%d %d", &potion.xpos, &potion.ypos);
-	fputs("¾ÆÀÌÅÛ ¼Òµå: ", stdout);
+	fputs("ì•„ì´í…œ ì†Œë“œ: ", stdout);
 	scanf("%d %d", &sword.xpos, &sword.ypos);
-	printf("Æ÷¼ÇÀ§Ä¡: %d, %d \n", potion.xpos, potion.ypos);
-	printf("¼ÒµåÀ§Ä¡: %d, %d \n", sword.xpos, sword.ypos);
+	printf("í¬ì…˜ìœ„ì¹˜: %d, %d \n", potion.xpos, potion.ypos);
+	printf("ì†Œë“œìœ„ì¹˜: %d, %d \n", sword.xpos, sword.ypos);
 	
 	resultPotion = potion.xpos*potion.ypos;
 	resultSword = sword.xpos*sword.ypos;
 	if(resultPotion > resultSword)
-		{printf("Æ÷¼ÇÀÌ ´õ ¸Ö¸® ÀÖ½À´Ï´Ù. \n");}
+		{printf("í¬ì…˜ì´ ë” ë©€ë¦¬ ìˆìŠµë‹ˆë‹¤. \n");}
 	else
-		{printf("¼Òµå°¡ ´õ ¸Ö¸® ÀÖ°Å³ª µ¿ÀÏÇÑ °Å¸® ÀÔ´Ï´Ù. \n");}
+		{printf("ì†Œë“œê°€ ë” ë©€ë¦¬ ìˆê±°ë‚˜ ë™ì¼í•œ ê±°ë¦¬ ì…ë‹ˆë‹¤. \n");}
 	printf("\n");
 	return 0;
 }
 
-//2 ±¸Á¶Ã¼Á¢±Ù°ú ¹è¿­ 
+//2 êµ¬ì¡°ì²´ì ‘ê·¼ê³¼ ë°°ì—´ 
 struct anime
 {
 	char title[20];
@@ -45,23 +45,23 @@ int main2()
 	int i;
 	for(i=1; i<4; i++)
 	{
-		printf("%d ¹øÂ° ¾Ö´ÏÁ¤º¸ ÀÔ·Â\n", i);
-		fputs("¾Ö´ÏÁ¦¸ñ: ", stdout);
+		printf("%d ë²ˆì§¸ ì• ë‹ˆì •ë³´ ì…ë ¥\n", i);
+		fputs("ì• ë‹ˆì œëª©: ", stdout);
 		scanf("%s", list[i].title);
-		fputs("ÁÖÀÎ°ø: ", stdout);
+		fputs("ì£¼ì¸ê³µ: ", stdout);
 		scanf("%s", list[i].hero);
-		fputs("¾Ö´ÏÈ¸Â÷: ", stdout);
-		scanf("%d", &list[i].episodes); // ÀÎÆ®Çü º¯¼ö¿¡´Â &¸¦ ÇØ¾ß ÁÖ¼Ò¸¦ ÀÔ·Â ¹ŞÀ» ¼ö ÀÖ´Ù. 
+		fputs("ì• ë‹ˆíšŒì°¨: ", stdout);
+		scanf("%d", &list[i].episodes); // ì¸íŠ¸í˜• ë³€ìˆ˜ì—ëŠ” &ë¥¼ í•´ì•¼ ì£¼ì†Œë¥¼ ì…ë ¥ ë°›ì„ ìˆ˜ ìˆë‹¤. 
 	}
 	
 	for(i=3; i>0; i--)
 	{
-		printf("%dÀ§! \nÁ¦¸ñ: %s \nÁÖÀÎ°ø: %s \nÈ¸Â÷: ÃÑ%dÈ­\n", i, list[i].title, list[i].hero, list[i].episodes);
+		printf("%dìœ„! \nì œëª©: %s \nì£¼ì¸ê³µ: %s \níšŒì°¨: ì´%dí™”\n", i, list[i].title, list[i].hero, list[i].episodes);
 	}
 	printf("\n");
 }
 
-//3 ±¸Á¶Ã¼ º¯¼ö ÃÊ±âÈ­ 
+//3 êµ¬ì¡°ì²´ ë³€ìˆ˜ ì´ˆê¸°í™” 
 struct pearl
 {
 	int xpearl;
@@ -78,13 +78,13 @@ struct bubbleTea
 int main3(void)
 {
 	struct pearl black={5, 10};
-	struct bubbleTea gongcha={"Å¸ÇÇ¿ÀÄ«¹ĞÅ©Æ¼","ÆŞÃß°¡",0.5};
-	printf("ÆŞÀÇ ÁÂÇ¥: %d, %d \n", black.xpearl, black.ypearl);
-	printf("¹öºíÆ¼: %s, %s, %f \n", gongcha.name, gongcha.tppping, gongcha.sugar); 
+	struct bubbleTea gongcha={"íƒ€í”¼ì˜¤ì¹´ë°€í¬í‹°","í„ì¶”ê°€",0.5};
+	printf("í„ì˜ ì¢Œí‘œ: %d, %d \n", black.xpearl, black.ypearl);
+	printf("ë²„ë¸”í‹°: %s, %s, %f \n", gongcha.name, gongcha.tppping, gongcha.sugar); 
 	printf("\n");
 }
 
-//4 ¹è¿­·Î ±¸Á¶Ã¼ º¯¼ö ÃÊ±âÈ­ 
+//4 ë°°ì—´ë¡œ êµ¬ì¡°ì²´ ë³€ìˆ˜ ì´ˆê¸°í™” 
 struct pizza
 {
 	char name[20];
@@ -95,19 +95,19 @@ struct pizza
 int main4(void)
 {
 	struct pizza dou[3]={
-		{"ºÒ°í±âÇÇÀÚ", "Ä¡Áî", 30},
-		{"Æ÷Å×ÀÌÅäÇÇÀÚ", "¿Ã¸®ºê", 50},
-		{"½´¸²ÇÁÇÇÀÚ", "°í±¸¸¶", 10}
+		{"ë¶ˆê³ ê¸°í”¼ì", "ì¹˜ì¦ˆ", 30},
+		{"í¬í…Œì´í† í”¼ì", "ì˜¬ë¦¬ë¸Œ", 50},
+		{"ìŠˆë¦¼í”„í”¼ì", "ê³ êµ¬ë§ˆ", 10}
 	};
 	int i;
 	for(i=0; i<3; i++)
 	{
-		printf("Ç°¸í: %s, ÅäÇÎ: %s, Ä¡ÁîµÎ²²: %dmm \n", dou[i].name, dou[i].topping, dou[i].cheese);
+		printf("í’ˆëª…: %s, í† í•‘: %s, ì¹˜ì¦ˆë‘ê»˜: %dmm \n", dou[i].name, dou[i].topping, dou[i].cheese);
 	} 
 	printf("\n");
 }
 
-//5 ±¸Á¶Ã¼¿Í Æ÷ÀÎÅÍ -> 
+//5 êµ¬ì¡°ì²´ì™€ í¬ì¸í„° -> 
 struct missile{
 	int x;
 	int y;
@@ -119,19 +119,19 @@ int main5(void)
 	struct missile korea={5, 10, 250};
 	struct missile america={15, 3, 200};
 	struct missile *kptr = &korea;
-	(*kptr).x += 5; // Æ÷ÀÎÅÍ·Î Á¢±ÙÇØ¼­ °ª¿¡ 5¸¦ Ãß°¡ÇÏ±â 
-	korea.x += 5; // ÁøÂ¥º¯¼ö·Î Á¢±ÙÇØ¼­ °ª¿¡ 5¸¦ Ãß°¡ÇÏ±â
+	(*kptr).x += 5; // í¬ì¸í„°ë¡œ ì ‘ê·¼í•´ì„œ ê°’ì— 5ë¥¼ ì¶”ê°€í•˜ê¸° 
+	korea.x += 5; // ì§„ì§œë³€ìˆ˜ë¡œ ì ‘ê·¼í•´ì„œ ê°’ì— 5ë¥¼ ì¶”ê°€í•˜ê¸°
 	korea.y += 2;
-	printf("kptr(k)ÀÇ ÁÂÇ¥: %d, %d \n", kptr -> x, kptr -> y); // (*ptr),x == ptr->x ±× ÁÖ¼ÒÀÇ ±× »óÀÚ¸¦ ¿­¾î¶ó 
-	kptr = &america; // ¹Ì»çÀÏ ÁÂÇ¥¸¦ ¹Ì±¹À¸·Î ¹Ù²Ù±â 
+	printf("kptr(k)ì˜ ì¢Œí‘œ: %d, %d \n", kptr -> x, kptr -> y); // (*ptr),x == ptr->x ê·¸ ì£¼ì†Œì˜ ê·¸ ìƒìë¥¼ ì—´ì–´ë¼ 
+	kptr = &america; // ë¯¸ì‚¬ì¼ ì¢Œí‘œë¥¼ ë¯¸êµ­ìœ¼ë¡œ ë°”ê¾¸ê¸° 
 	kptr -> x += 15;
 	kptr -> y += 5;
 	america.y -= 2;
-	printf("kptr(a)ÀÇ ÁÂÇ¥: %d, %d \n", america.x, (*kptr).y); // -> ´Â Æ÷ÀÎÅÍ¸¸ ¾µ ¼ö ÀÖ´Ù. ÀÏ¹İº¯¼ö°¡ »ç¿ë½Ã ¿À·ù 
+	printf("kptr(a)ì˜ ì¢Œí‘œ: %d, %d \n", america.x, (*kptr).y); // -> ëŠ” í¬ì¸í„°ë§Œ ì“¸ ìˆ˜ ìˆë‹¤. ì¼ë°˜ë³€ìˆ˜ê°€ ì‚¬ìš©ì‹œ ì˜¤ë¥˜ 
 	printf("\n");
 }
 
-//6 ±¸Á¶Ã¼ ¾ÈÀÇ ±¸Á¶Ã¼
+//6 êµ¬ì¡°ì²´ ì•ˆì˜ êµ¬ì¡°ì²´
 struct ball // mini 
 {
 	int xball;
@@ -141,19 +141,19 @@ struct ball // mini
 struct paddle // p1
 {
 	int id;
-	struct ball * target; // targetÀº ±¸Á¶Ã¼ballÀ» ¹Ù¶óº»´Ù. 
+	struct ball * target; // targetì€ êµ¬ì¡°ì²´ballì„ ë°”ë¼ë³¸ë‹¤. 
 };
 
 int main6(void)
 {
 	struct ball mini = {20, 50};
 	int ids = 10;
-	struct paddle p1 = {ids, &mini}; // id¿¡ ids¸¦ ´ëÀÔ,  p1Àº ¹Ì´ÏÀÇ ÁÖ¼Ò¸¦ º»´Ù. 
-	printf("ÇÃ·¹ÀÌ¾î1: id: %d ¼ÒÀ¯º¼Å©±â: %d, %d \n", p1.id, p1.target -> xball, (*p1.target).yball);
+	struct paddle p1 = {ids, &mini}; // idì— idsë¥¼ ëŒ€ì…,  p1ì€ ë¯¸ë‹ˆì˜ ì£¼ì†Œë¥¼ ë³¸ë‹¤. 
+	printf("í”Œë ˆì´ì–´1: id: %d ì†Œìœ ë³¼í¬ê¸°: %d, %d \n", p1.id, p1.target -> xball, (*p1.target).yball);
 	printf("\n");
 }
 
-//7 ³»¾È¿¡ ¶Ç ³» ±¸Á¶Ã¼ 
+//7 ë‚´ì•ˆì— ë˜ ë‚´ êµ¬ì¡°ì²´ 
 struct subway
 {
 	int num;
@@ -168,15 +168,15 @@ int main7(void)
 	struct subway sub3 = {3, 200, &sub1};
 	sub1.next = &sub2;
 	sub2.next = &sub3;
-	printf("%dÈ£Â÷ %d¸í°ú %dÈ£Â÷ %d¸í ¿¬°á \n", sub1.num, sub1.people, sub1.next -> num, (*sub1.next).people);
-	printf("%dÈ£Â÷ %d¸í°ú %dÈ£Â÷ %d¸í ¿¬°á \n", sub2.num, sub2.people, sub2.next -> num, (*sub2.next).people);
-	printf("%dÈ£Â÷ %d¸í°ú %dÈ£Â÷ %d¸í ¿¬°á \n", sub3.num, sub3.people, sub3.next -> num, (*sub3.next).people);
-	printf("1È£Â÷ÁÖ¼Ò: %p, È£Â÷¹øÈ£: %p, \n»ç¶÷¼ö: %p, 3È£Â÷¿¡¼­ ¿¬°áµÈ1È£Â÷¹øÈ£: %p \n",
+	printf("%dí˜¸ì°¨ %dëª…ê³¼ %dí˜¸ì°¨ %dëª… ì—°ê²° \n", sub1.num, sub1.people, sub1.next -> num, (*sub1.next).people);
+	printf("%dí˜¸ì°¨ %dëª…ê³¼ %dí˜¸ì°¨ %dëª… ì—°ê²° \n", sub2.num, sub2.people, sub2.next -> num, (*sub2.next).people);
+	printf("%dí˜¸ì°¨ %dëª…ê³¼ %dí˜¸ì°¨ %dëª… ì—°ê²° \n", sub3.num, sub3.people, sub3.next -> num, (*sub3.next).people);
+	printf("1í˜¸ì°¨ì£¼ì†Œ: %p, í˜¸ì°¨ë²ˆí˜¸: %p, \nì‚¬ëŒìˆ˜: %p, 3í˜¸ì°¨ì—ì„œ ì—°ê²°ëœ1í˜¸ì°¨ë²ˆí˜¸: %p \n",
 	&sub1, &sub1.num, &sub1.people, &sub3.next -> num);
 	printf("\n");
 }
 
-// ¸ğµç ÇÔ¼ö È£Ãâ 
+// ëª¨ë“  í•¨ìˆ˜ í˜¸ì¶œ 
 int main()
 {
 	main1();
@@ -186,7 +186,7 @@ int main()
 	main5();
 	main6();
 	main7();
-	printf("Æ÷¼ÇÀÇ X * Y = %d, ¼ÒµåÀÇ X * Y = %d", resultPotion, resultSword);
+	printf("í¬ì…˜ì˜ X * Y = %d, ì†Œë“œì˜ X * Y = %d", resultPotion, resultSword);
 }
 
 
