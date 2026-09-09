@@ -1,91 +1,65 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ÇÔ¼öÀÎÀÚ·Î ¹è¿­ Àü´ŞÇÏ±â 
+// í•¨ìˆ˜ì¸ìë¡œ ë°°ì—´ ì „ë‹¬í•˜ê¸° 
 void MovieTime(int *box, int gasu)
 {
 	int i;
 	for(i=0; i<gasu; i++)
 	{
-		printf("%d¹ø ¿µÈ­ »ó¿µ½Ã°£: %dºĞ \n", i+1, box[i]); // == *(box + i) ¹è¿­·Î ¾²¸é *°¡ ÇÊ¿ä ¾øÀ½ 
-	} // box[0]ÀÌ È£Ãâ ÀÌÈÄ ¹İº¹ 
+		printf("%dë²ˆ ì˜í™” ìƒì˜ì‹œê°„: %dë¶„ \n", i+1, box[i]); // == *(box + i) ë°°ì—´ë¡œ ì“°ë©´ *ê°€ í•„ìš” ì—†ìŒ 
+	} // box[0]ì´ í˜¸ì¶œ ì´í›„ ë°˜ë³µ 
 }
 
 int main1(void)
 {
 	int netflix1[3] = {120, 90, 150};
 	int netflix2[5] = {110, 130, 95, 140, 85};
-	MovieTime(netflix1, sizeof(netflix1)/sizeof(int)); // netflix1ÀÇ ÁÖ¼Ò¸¦ *box¿¡ ´ã°í 
-	MovieTime(netflix2, sizeof(netflix2)/sizeof(int)); // gasu¿¡´Â ¹è¿­ÀÇ byte/ ¹è¿­1°³ÀÇ byte¸¦ ÇÏ¸é (12/4==3) 3°³°¡ µÈ´Ù. 
+	MovieTime(netflix1, sizeof(netflix1)/sizeof(int)); // netflix1ì˜ ì£¼ì†Œë¥¼ *boxì— ë‹´ê³  
+	MovieTime(netflix2, sizeof(netflix2)/sizeof(int)); // gasuì—ëŠ” ë°°ì—´ì˜ byte/ ë°°ì—´1ê°œì˜ byteë¥¼ í•˜ë©´ (12/4==3) 3ê°œê°€ ëœë‹¤. 
 	printf("\n");
 }
 
 // call-by-value
-void addStamp(int copyStamp) // myStamp°¡ copyStamp¿¡ ´ëÀÔ 
+void addStamp(int copyStamp) // myStampê°€ copyStampì— ëŒ€ì… 
 {
 	copyStamp += 1; // 5+1=6
-	printf("addStampÀÇ ½ºÅÆÇÁ °³¼ö: %d°³ \n", copyStamp);
+	printf("addStampì˜ ìŠ¤íƒ¬í”„ ê°œìˆ˜: %dê°œ \n", copyStamp);
 } 
 
 int main2(void)
 {
 	int myStamp = 5;
 	addStamp(myStamp);
-	printf("³ªÀÇ ½ºÅÆÇÁ °³¼ö: %d°³ \n", myStamp); // µ¹¾Æ¿À´Ï ½ºÅÆÇÁ »ç¶óÁü ÁÖ¼Ò¸¦ ¾È½á¼­ ±×·¡ ¤»¤» 
+	printf("ë‚˜ì˜ ìŠ¤íƒ¬í”„ ê°œìˆ˜: %dê°œ \n", myStamp); // ëŒì•„ì˜¤ë‹ˆ ìŠ¤íƒ¬í”„ ì‚¬ë¼ì§ ì£¼ì†Œë¥¼ ì•ˆì¨ì„œ ê·¸ë˜ ã…‹ã…‹ 
 	printf("\n");
 }
 
 // call-by-reference 
 int yourStamp = 5;
 
-void addStampCard(int * stampCard) // * stampCard´Â yourStamp¸¦ °¡¸£Å²´Ù. 
+void addStampCard(int * stampCard) // * stampCardëŠ” yourStampë¥¼ ê°€ë¥´í‚¨ë‹¤. 
 {
-	* stampCard += 1; // yourStamp¿¡ 1°³ Ãß°¡ 
-	printf("addStampCard ³»ÀÇ ½ºÅÆÇÁ¼ö: %d°³ \n", * stampCard);
-	printf("yourStamp¸¦ Ãâ·ÂÇØ¹ö¸®¸é? %d°³ \n", yourStamp); // Àü¿ªº¯¼ö + ÇÔ¼ö À§ÂÊ¿¡ ÀÖ¾î¾ß Ãâ·ÂµÊ 
-	printf("stampCard Æ÷ÀÎÅÍ¸¦ ¾È ÂïÀ¸¸é? ÁÖ¼Ò: %d \n", stampCard); // stampCard´Â ÁÖ¼Ò¸¦ ÀúÀåÇÏ±â À§ÇØ ÅÂ¾î³­³ğÀÌ¶ó ÀÏ¹İÃâ·Â½Ã ÁÖ¼Ò°¡ ³ª¿È????
-	printf("stampCard ÁÖ¼Ò¸¦ Âï¾î¹ö¸®¸é? ÁÖ¼Ò: %d \n", &stampCard); // ´ç¿¬È÷ ÁÖ¼Ò°¡ ³ª¿È
+	* stampCard += 1; // yourStampì— 1ê°œ ì¶”ê°€ 
+	printf("addStampCard ë‚´ì˜ ìŠ¤íƒ¬í”„ìˆ˜: %dê°œ \n", * stampCard);
+	printf("yourStampë¥¼ ì¶œë ¥í•´ë²„ë¦¬ë©´? %dê°œ \n", yourStamp); // ì „ì—­ë³€ìˆ˜ + í•¨ìˆ˜ ìœ„ìª½ì— ìˆì–´ì•¼ ì¶œë ¥ë¨ 
+	printf("stampCard í¬ì¸í„°ë¥¼ ì•ˆ ì°ìœ¼ë©´? ì£¼ì†Œ: %d \n", stampCard); // stampCardëŠ” ì£¼ì†Œë¥¼ ì €ì¥í•˜ê¸° ìœ„í•´ íƒœì–´ë‚œë†ˆì´ë¼ ì¼ë°˜ì¶œë ¥ì‹œ ì£¼ì†Œê°€ ë‚˜ì˜´????
+	printf("stampCard ì£¼ì†Œë¥¼ ì°ì–´ë²„ë¦¬ë©´? ì£¼ì†Œ: %d \n", &stampCard); // ë‹¹ì—°íˆ ì£¼ì†Œê°€ ë‚˜ì˜´
 } 
 
 int main3(void)
 {
 	addStampCard(&yourStamp);
-	printf("³ÊÀÇ ½ºÅÆÇÁ ¼ö: %d°³ \n", yourStamp);
-	// printf("stampCard¸¦ È£ÃâÇØ¹ö¸®¸é? %d \n", * stampCard); / Áö¿ªº¯¼ö¶ó È£Ãâ ¸øÇÔ 
-	printf("yourStamp ÁÖ¼Ò¸¦ Âï¾î¹ö¸®¸é? ÁÖ¼Ò: %d \n", &yourStamp);
+	printf("ë„ˆì˜ ìŠ¤íƒ¬í”„ ìˆ˜: %dê°œ \n", yourStamp);
+	// printf("stampCardë¥¼ í˜¸ì¶œí•´ë²„ë¦¬ë©´? %d \n", * stampCard); / ì§€ì—­ë³€ìˆ˜ë¼ í˜¸ì¶œ ëª»í•¨ 
+	printf("yourStamp ì£¼ì†Œë¥¼ ì°ì–´ë²„ë¦¬ë©´? ì£¼ì†Œ: %d \n", &yourStamp);
 	printf("\n");
 }
 
-// ¸ŞÀÎ¿µ¿ª
+// ë©”ì¸ì˜ì—­
 int main()
 {
 	main1();
 	main2();
 	main3();
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
