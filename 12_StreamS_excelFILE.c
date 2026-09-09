@@ -6,56 +6,56 @@ int main(void)
 	// puts, fputs 
 	char *str="Simple String";
 	printf("1. puts test ------ \n");
-	puts(str); // putsÇÔ¼ö´Â ¹®ÀÚ¿­ Ãâ·ÂÈÄ ÀÚµ¿°³ÇàÀÌ ÀÌ·ç¾îÁø´Ù 
-	puts("So Simple String"); // ¸¶Âù°¡Áö 
+	puts(str); // putsí•¨ìˆ˜ëŠ” ë¬¸ìì—´ ì¶œë ¥í›„ ìë™ê°œí–‰ì´ ì´ë£¨ì–´ì§„ë‹¤ 
+	puts("So Simple String"); // ë§ˆì°¬ê°€ì§€ 
 	printf("2. fputs test ------ \n");
-	fputs(str, stdout); printf("\n"); // fputs´Â °³ÇàÀÌ ÇÊ¿äÇÏ´Ù 
-	fputs("So Simple String", stdout); printf("\n"); //¸¶Âù°¡Áö 
+	fputs(str, stdout); printf("\n"); // fputsëŠ” ê°œí–‰ì´ í•„ìš”í•˜ë‹¤ 
+	fputs("So Simple String", stdout); printf("\n"); //ë§ˆì°¬ê°€ì§€ 
 	printf("3. end of main ---\n");
 	
 	/*
-	//gets(¸Å¿ìÀ§Çè), fgets
+	//gets(ë§¤ìš°ìœ„í—˜), fgets
 	char str1[7];
 	int p;
-	printf("fgets test ¹®ÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ");
+	printf("fgets test ë¬¸ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”: ");
 	for(p=0; p<5; p++)
 	{
-		fgets(str1, sizeof(str1), stdin); // stdin : Å°º¸µå
+		fgets(str1, sizeof(str1), stdin); // stdin : í‚¤ë³´ë“œ
 		printf("Read %d : %s \n", p+1, str1); 
 	}
 	*/
 	
-	// ¿ì¸®¹İ ¼ºÀûÇ¥ ¿¢¼¿ ÀÚµ¿ »ı¼º±â
+	// ìš°ë¦¬ë°˜ ì„±ì í‘œ ì—‘ì…€ ìë™ ìƒì„±ê¸°
 	FILE *score;
 	typedef struct 
 	{
-		char name[20]; // ÀÌ¸§ÀÔ·Â º¯¼ö 
+		char name[20]; // ì´ë¦„ì…ë ¥ ë³€ìˆ˜ 
 		int mat;
 		int electron;
 		int degital;
 	} studuntScore;
 	studuntScore SS;
 	int i;
-	score = fopen("class_scores.csv","wt"); // »ı¼ºÇÒ ÆÄÀÏ¸í°ú ¾µ ¹æ¹ı 
-	fputs("ÀÌ¸§, °ø¾÷¼öÇĞ, ÀüÀÚÈ¸·Î, µğÁöÅĞ°øÇĞ\n", score); // Ãâ·ÂÀå¼Ò ÁöÁ¤Àº fputs 
+	score = fopen("class_scores.csv","wt"); // ìƒì„±í•  íŒŒì¼ëª…ê³¼ ì“¸ ë°©ë²• 
+	fputs("ì´ë¦„, ê³µì—…ìˆ˜í•™, ì „ìíšŒë¡œ, ë””ì§€í„¸ê³µí•™\n", score); // ì¶œë ¥ì¥ì†Œ ì§€ì •ì€ fputs 
 	for(i=0; i<3; i++)
 	{
-		printf("%d¹øÂ° ÇĞ»ıÀÇ ÀÌ¸§ÀÔ·Â: ", i+1);
-		fgets(SS.name, sizeof(SS.name), stdin); // scanf¸¦ ¾²¸é ´õ ÆíÇÑµ¥ fgets¸¦ ¾²°í½Í´Ù 
-		SS.name[strcspn(SS.name, "\n")] = '\0'; // ÄÚµåµÚÀÇ ¹öÆÛ¸¦ Ã£¾Æ¼­ Á¦°ÅÇÏ´Â ³à¼® 
-		printf("%s ÇĞ»ıÀÇ °ø¾÷¼öÇĞ Á¡¼ö ÀÔ·Â: ", SS.name);
+		printf("%dë²ˆì§¸ í•™ìƒì˜ ì´ë¦„ì…ë ¥: ", i+1);
+		fgets(SS.name, sizeof(SS.name), stdin); // scanfë¥¼ ì“°ë©´ ë” í¸í•œë° fgetsë¥¼ ì“°ê³ ì‹¶ë‹¤ 
+		SS.name[strcspn(SS.name, "\n")] = '\0'; // ì½”ë“œë’¤ì˜ ë²„í¼ë¥¼ ì°¾ì•„ì„œ ì œê±°í•˜ëŠ” ë…€ì„ 
+		printf("%s í•™ìƒì˜ ê³µì—…ìˆ˜í•™ ì ìˆ˜ ì…ë ¥: ", SS.name);
 		scanf("%d", &SS.mat);
-		printf("%s ÇĞ»ıÀÇ ÀüÀÚÈ¸·Î Á¡¼ö ÀÔ·Â: ", SS.name);
+		printf("%s í•™ìƒì˜ ì „ìíšŒë¡œ ì ìˆ˜ ì…ë ¥: ", SS.name);
 		scanf("%d", &SS.electron);
-		printf("%s ÇĞ»ıÀÇ µğÁöÅĞ°øÇĞ Á¡¼ö ÀÔ·Â: ", SS.name);
+		printf("%s í•™ìƒì˜ ë””ì§€í„¸ê³µí•™ ì ìˆ˜ ì…ë ¥: ", SS.name);
 		scanf("%d", &SS.degital);
-		fprintf(score, "%s, %d, %d, %d\n", SS.name, SS.mat, SS.electron, SS.degital); // ÆÄÀÏ¿¡ ¾²±â 
-		while(getchar() != '\n'); // fputs¸¦ ¾²¸é ¹öÆÛ enter±îÁö °°ÀÌ ÀúÀåµÇ¹Ç·Î Ã»¼Ò°¡ ÇÊ¿ä 
+		fprintf(score, "%s, %d, %d, %d\n", SS.name, SS.mat, SS.electron, SS.degital); // íŒŒì¼ì— ì“°ê¸° 
+		while(getchar() != '\n'); // fputsë¥¼ ì“°ë©´ ë²„í¼ enterê¹Œì§€ ê°™ì´ ì €ì¥ë˜ë¯€ë¡œ ì²­ì†Œê°€ í•„ìš” 
 	}
 	fclose(score);
-	printf("¿¢¼¿ÆÄÀÏ¿¡ ¼ºÀûÀÌ ÀúÀåµÇ¾ú½À´Ï´Ù. \n");
+	printf("ì—‘ì…€íŒŒì¼ì— ì„±ì ì´ ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤. \n");
 	
-	// ¸Ş¸ğÀå¿¡ º° Âï±â
+	// ë©”ëª¨ì¥ì— ë³„ ì°ê¸°
 	FILE *star;
 	int s, t;
 	int size = 100;
@@ -77,6 +77,6 @@ int main(void)
 		fputc('\n', star);
 	}
 	fclose(star);
-	printf("¸Ş¸ğÀå¿¡ ¾î¶°ÇÑ ±×¸²ÀÌ ±×·ÁÁ³½À´Ï´Ù. ¿­¾îº¸¼¼¿ä! \n");
+	printf("ë©”ëª¨ì¥ì— ì–´ë– í•œ ê·¸ë¦¼ì´ ê·¸ë ¤ì¡ŒìŠµë‹ˆë‹¤. ì—´ì–´ë³´ì„¸ìš”! \n");
 	return 0;
 }
