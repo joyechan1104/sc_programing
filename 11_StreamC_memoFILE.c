@@ -1,35 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//¹®ÀÚ ÀÔÃâ·Â ÇÔ¼ö
+//ë¬¸ì ì…ì¶œë ¥ í•¨ìˆ˜
 int main(void)
 {
 	char ch = 'H';
 	
-//put character ¹®ÀÚÇÏ³ª¸¦ ¸ğ´ÏÅÍ¿¡ Ãâ·ÂÇÑ´Ù!
+//put character ë¬¸ìí•˜ë‚˜ë¥¼ ëª¨ë‹ˆí„°ì— ì¶œë ¥í•œë‹¤!
 	putchar(ch);  
-	putchar('\0'); // ¹İº¹ÀÛ¾÷½Ã¿¡´Â putchar°¡ °¡º­¿ö¼­ ÈÎ¾À À¯¸®ÇÏ´Ù. 
-	putchar(' '); // putchar´Â ¹®ÀÚ ÇÏ³ª¸¸ Ã³¸®µÇ¹Ç·Î ¾ÆÁÖ ºü¸£°Ô µ¹¾Æ°£´Ù. 
+	putchar('\0'); // ë°˜ë³µì‘ì—…ì‹œì—ëŠ” putcharê°€ ê°€ë²¼ì›Œì„œ í›¨ì”¬ ìœ ë¦¬í•˜ë‹¤. 
+	putchar(' '); // putcharëŠ” ë¬¸ì í•˜ë‚˜ë§Œ ì²˜ë¦¬ë˜ë¯€ë¡œ ì•„ì£¼ ë¹ ë¥´ê²Œ ëŒì•„ê°„ë‹¤. 
 	putchar('\n');
-	printf("%c \n", ch); // ³»ºÎÀûÀ¸·Î Ã³¸®ÇÒ ÀÏÀÌ ¸¹¾Æ ¹«°Ì´Ù. 
+	printf("%c \n", ch); // ë‚´ë¶€ì ìœ¼ë¡œ ì²˜ë¦¬í•  ì¼ì´ ë§ì•„ ë¬´ê²ë‹¤. 
 	
 	
-// Lv1. ¸Ş¸ğÀå¿¡ ±ÛÀ» ½áº¸±â 
+// Lv1. ë©”ëª¨ì¥ì— ê¸€ì„ ì¨ë³´ê¸° 
 	FILE *memo;
-	memo = fopen("fputctest.txt", "wt"); // ÆÄÀÏÀ» ¿©´Â Ç¥ÁØÇÔ¼ö: fopen 
-	//ÆÄÀÏ ¿­±â (ÀÌ¸§Àº fputctest.txt, ¸ğµå´Â "wt" -> ±ÛÀÚ¸¦ ¾²°Ú´Ù!)
-	// "wt"(Write) ¸ğµå: ÀûÈù ³»¿ëÀ» ´Ù Áö¿ì°í ¾²°Ú´Ù 
-	// "at"(Append, Ãß°¡) ¸ğµå: ±×³É °è¼Ó ¾²°Ú´Ù 
+	memo = fopen("fputctest.txt", "wt"); // íŒŒì¼ì„ ì—¬ëŠ” í‘œì¤€í•¨ìˆ˜: fopen 
+	//íŒŒì¼ ì—´ê¸° (ì´ë¦„ì€ fputctest.txt, ëª¨ë“œëŠ” "wt" -> ê¸€ìë¥¼ ì“°ê² ë‹¤!)
+	// "wt"(Write) ëª¨ë“œ: ì íŒ ë‚´ìš©ì„ ë‹¤ ì§€ìš°ê³  ì“°ê² ë‹¤ 
+	// "at"(Append, ì¶”ê°€) ëª¨ë“œ: ê·¸ëƒ¥ ê³„ì† ì“°ê² ë‹¤ 
 	int i=0;
 	
 	if(memo == NULL)
 	{
-		printf("fputctest.txt ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù \n.");
+		printf("fputctest.txt íŒŒì¼ì„ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤ \n.");
 		return -1;
 	}
 	for(i=0; i<10; i++)
 	{
-		fputc('G', memo); // fputc ´Â ¹®ÀÚÇÏ³ª¸¦ Ãâ·ÂÇÏ´Âµ¥ ÀúÀåÇÒ Àå¼Ò¸¦ ÁöÁ¤ ÇÒ ¼ö ÀÖ´Ù. 
+		fputc('G', memo); // fputc ëŠ” ë¬¸ìí•˜ë‚˜ë¥¼ ì¶œë ¥í•˜ëŠ”ë° ì €ì¥í•  ì¥ì†Œë¥¼ ì§€ì • í•  ìˆ˜ ìˆë‹¤. 
 		fputc('e', memo);
 		fputc('m', memo);
 		fputc('i', memo);
@@ -38,108 +38,74 @@ int main(void)
 		fputc('i', memo);
 		fputc('\n', memo);
 	}
-	fclose(memo); // ÆÄÀÏÀ» ´İ´Â ÇÔ¼ö 
-	printf("fputctest.txt¿¡ ÆÄÀÏÀ» ÀúÀåÇß½À´Ï´Ù. \n");
+	fclose(memo); // íŒŒì¼ì„ ë‹«ëŠ” í•¨ìˆ˜ 
+	printf("fputctest.txtì— íŒŒì¼ì„ ì €ì¥í–ˆìŠµë‹ˆë‹¤. \n");
 	
-//get character: Å°º¸µå·ÎºÎÅÍ µü ÇÑ±ÛÀÚ¸¦ ÀĞ¾î¿À´Â ÇÔ¼ö
+//get character: í‚¤ë³´ë“œë¡œë¶€í„° ë”± í•œê¸€ìë¥¼ ì½ì–´ì˜¤ëŠ” í•¨ìˆ˜
 	int ch1;
-	printf("¾Æ¹« ±ÛÀÚ³ª ÇÏ³ª ÀÔ·Â ÇÏ¼¼¿ä: ");
+	printf("ì•„ë¬´ ê¸€ìë‚˜ í•˜ë‚˜ ì…ë ¥ í•˜ì„¸ìš”: ");
 	ch1 = getchar();
-	printf("¹æ±İ ÀÔ·ÂÇÑ ±ÛÀÚ´Â: ");
+	printf("ë°©ê¸ˆ ì…ë ¥í•œ ê¸€ìëŠ”: ");
 	putchar(ch1);
 	printf("\n\n"); 
 	
-// Lv2. ¸Ş¸ğÀåÀÇ ±ÛÀ» ¸ğ´ÏÅÍ¿¡ Ãâ·ÂÇÏ±â 
-	// FILE *memo; // Lv1 ÇÒ¶§ ÀÌ¹Ì ÁöÁ¤ÇØµÒ 
-	memo = fopen("fputctest.txt", "rt"); // rt: ÀĞ±â¸ğµå 
+// Lv2. ë©”ëª¨ì¥ì˜ ê¸€ì„ ëª¨ë‹ˆí„°ì— ì¶œë ¥í•˜ê¸° 
+	// FILE *memo; // Lv1 í• ë•Œ ì´ë¯¸ ì§€ì •í•´ë‘  
+	memo = fopen("fputctest.txt", "rt"); // rt: ì½ê¸°ëª¨ë“œ 
 	int ch2 = 0;
 	
 	if(memo == NULL)
 	{
-		printf("fputctest.txt ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù \n.");
+		printf("fputctest.txt íŒŒì¼ì„ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤ \n.");
 		return -1;
 	}
-	printf("fputctest.txt·ÎºÎÅÍ ¹®ÀÚ¸¦ °¡Á®¿É´Ï´Ù. \n");
-	while((ch2 = fgetc(memo)) != EOF) //fgetc: ¾îµğ¼±°¡ ¹®ÀÚ¸¦ °¡Á® ¿Ã ¼ö ÀÖ´Ù 
+	printf("fputctest.txtë¡œë¶€í„° ë¬¸ìë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤. \n");
+	while((ch2 = fgetc(memo)) != EOF) //fgetc: ì–´ë””ì„ ê°€ ë¬¸ìë¥¼ ê°€ì ¸ ì˜¬ ìˆ˜ ìˆë‹¤ 
 	{
 		putchar(ch2);
 	}
 	fclose(memo);
-	printf("fputctest.txt·ÎºÎÅÍ ¹®ÀÚ¸¦ °¡Á®¿Ô½À´Ï´Ù. \n\n");
+	printf("fputctest.txtë¡œë¶€í„° ë¬¸ìë¥¼ ê°€ì ¸ì™”ìŠµë‹ˆë‹¤. \n\n");
 	
-	
-	
-	
-	
-	
-	
-// Lv3. ³ª¸¸ÀÇ ºñ¹Ğ ¸Ş¼¼Áö ÀúÀå¼Ò
-	// ÀÔ·Â(getchar) ¡æ ÀúÀå(fputc) ¡æ ÀĞ±â(fgetc) ¡æ Ãâ·Â(putchar)
+// Lv3. ë‚˜ë§Œì˜ ë¹„ë°€ ë©”ì„¸ì§€ ì €ì¥ì†Œ
+	// ì…ë ¥(getchar) â†’ ì €ì¥(fputc) â†’ ì½ê¸°(fgetc) â†’ ì¶œë ¥(putchar)
 	FILE *secret;
 	int character = 0;
 	
-	// ÀúÀå ÆÄÆ®  
+	// ì €ì¥ íŒŒíŠ¸  
 	secret = fopen("secret.txt", "wt");
 	if(secret == NULL)
 	{
-		printf("secret.txt ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù. \n");
+		printf("secret.txt íŒŒì¼ì„ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. \n");
 		return -1;
 	}
 	
-	printf("secret.txt ÆÄÀÏ¿¡ ¹®ÀÚ¸¦ ÀúÀåÇÕ´Ï´Ù. Å¸ÀÌÇÎÀ» ÇØ ÁÖ¼¼¿ä. 'q'ÀÔ·Â½Ã Á¾·á \n\n");
+	printf("secret.txt íŒŒì¼ì— ë¬¸ìë¥¼ ì €ì¥í•©ë‹ˆë‹¤. íƒ€ì´í•‘ì„ í•´ ì£¼ì„¸ìš”. 'q'ì…ë ¥ì‹œ ì¢…ë£Œ \n\n");
 	while((character = getchar()) != 'q')
 	{
 		fputc(character, secret);
 	}
-	printf("\nsecret.txt ÆÄÀÏ¿¡ ¹®ÀÚ¸¦ ÀúÀåÇß½À´Ï´Ù. ÆÄÀÏÀ» ´İ½À´Ï´Ù. \n");
+	printf("\nsecret.txt íŒŒì¼ì— ë¬¸ìë¥¼ ì €ì¥í–ˆìŠµë‹ˆë‹¤. íŒŒì¼ì„ ë‹«ìŠµë‹ˆë‹¤. \n");
 	fclose(secret);
 	
-	// ºÒ·¯¿À±â ÆÄÆ® 
+	// ë¶ˆëŸ¬ì˜¤ê¸° íŒŒíŠ¸ 
 	secret = fopen("secret.txt", "rt");
 	if(secret == NULL)
 	{
-		printf("secret.txt ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù. \n");
+		printf("secret.txt íŒŒì¼ì„ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. \n");
 		return -1;
 	}
 	
-	printf("¸ğ´ÏÅÍ¿¡ Ãâ·ÂÇÏ±âÀ§ÇØ secret.txt ÆÄÀÏÀ» ºÒ·¯¿É´Ï´Ù. \n\n");
+	printf("ëª¨ë‹ˆí„°ì— ì¶œë ¥í•˜ê¸°ìœ„í•´ secret.txt íŒŒì¼ì„ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤. \n\n");
 	while((character = fgetc(secret)) != EOF)
 	{
 		putchar(character);
 	}
-	printf("\n\n¸ğ´ÏÅÍ¿¡ Ãâ·ÂÀ» ¿Ï·áÇß½À´Ï´Ù. secret.txt ÆÄÀÏÀ» ´İ½À´Ï´Ù. \n");
+	printf("\n\nëª¨ë‹ˆí„°ì— ì¶œë ¥ì„ ì™„ë£Œí–ˆìŠµë‹ˆë‹¤. secret.txt íŒŒì¼ì„ ë‹«ìŠµë‹ˆë‹¤. \n");
 	fclose(secret);
-	
-
 	
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
