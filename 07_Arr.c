@@ -4,14 +4,14 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	// ¹è¿­ÀÌ¶õ?
-	int floor101, floor102, floor103, floor104; // 1Ãþ 101È£ºÎÅÍ 104È£±îÁö  
-	int floor201, floor202, floor203, floor204; // 1Ãþ 201È£ºÎÅÍ 204È£±îÁö
-	int floor301, floor302, floor303, floor304; // 1Ãþ 301È£ºÎÅÍ 304È£±îÁö
-	// ÀÌ·¸°Ô ÇÏ¸é? ¸Å¿ì ¹ø°Å·Ó´Ù. >> ´Ù¼öÀÇ º¯¼ö ¼±¾ðÀ» ¿ëÀÌÇÏ°Ô ÇÏ±âÀ§ÇÔ 
-	int arra[7]; // ±æÀÌ°¡ 7(0~6)ÀÎ intÇü 1Â÷¿ø ¹è¿­ / ´ëÀÔ¿¬»êÀÚ´Â ºÒÇÊ¿ä 
-	arra[0] = 10;  arra[1] = 12; arra[2] = 25; // °ø°£¿¡ ¼ýÀÚ¸¦ ³ÖÀ»¶§ ´ëÀÔ ¿¬»êÀÚ°¡ ÇÊ¿ä 
-	printf("´ëÀÔµÈ¼ö: %d, %d, %d\n ÁÖ¼Ò: %d, %d, %d \n", arra[0], arra[1], arra[2], &arra[0], &arra[1], &arra[2]);
+	// ë°°ì—´ì´ëž€?
+	int floor101, floor102, floor103, floor104; // 1ì¸µ 101í˜¸ë¶€í„° 104í˜¸ê¹Œì§€  
+	int floor201, floor202, floor203, floor204; // 1ì¸µ 201í˜¸ë¶€í„° 204í˜¸ê¹Œì§€
+	int floor301, floor302, floor303, floor304; // 1ì¸µ 301í˜¸ë¶€í„° 304í˜¸ê¹Œì§€
+	// ì´ë ‡ê²Œ í•˜ë©´? ë§¤ìš° ë²ˆê±°ë¡­ë‹¤. >> ë‹¤ìˆ˜ì˜ ë³€ìˆ˜ ì„ ì–¸ì„ ìš©ì´í•˜ê²Œ í•˜ê¸°ìœ„í•¨ 
+	int arra[7]; // ê¸¸ì´ê°€ 7(0~6)ì¸ intí˜• 1ì°¨ì› ë°°ì—´ / ëŒ€ìž…ì—°ì‚°ìžëŠ” ë¶ˆí•„ìš” 
+	arra[0] = 10;  arra[1] = 12; arra[2] = 25; // ê³µê°„ì— ìˆ«ìžë¥¼ ë„£ì„ë•Œ ëŒ€ìž… ì—°ì‚°ìžê°€ í•„ìš” 
+	printf("ëŒ€ìž…ëœìˆ˜: %d, %d, %d\n ì£¼ì†Œ: %d, %d, %d \n", arra[0], arra[1], arra[2], &arra[0], &arra[1], &arra[2]);
 	
 	int arr[5];
 	int sum = 0, ia = 0;
@@ -22,19 +22,19 @@ int main(int argc, char *argv[]) {
 	{
 		sum += arr[ia];
 	}
-	printf("¹è¿­ÀÇ ÀúÀåµÈ °ªÀÇ ÇÕ°è = %d \n", sum);
+	printf("ë°°ì—´ì˜ ì €ìž¥ëœ ê°’ì˜ í•©ê³„ = %d \n", sum);
 	
-	// 1Â÷¿ø ¹è¿­ÀÇ ¼±¾ð°ú ÃÊ±âÈ­ ¸®½ºÆ® 
-	int arr1[5] = {1, 2, 3, 4, 5}; // 5Ä­ 
-	int arr2[ ] = {1, 2, 3, 4, 5, 6, 7}; //7Ä­ 
-	int arr3[5] = {1, 2}; // [1, 2, 0, 0, 0] À¸·Î Ã¤¿öÁø´Ù. 
+	// 1ì°¨ì› ë°°ì—´ì˜ ì„ ì–¸ê³¼ ì´ˆê¸°í™” ë¦¬ìŠ¤íŠ¸ 
+	int arr1[5] = {1, 2, 3, 4, 5}; // 5ì¹¸ 
+	int arr2[ ] = {1, 2, 3, 4, 5, 6, 7}; //7ì¹¸ 
+	int arr3[5] = {1, 2}; // [1, 2, 0, 0, 0] ìœ¼ë¡œ ì±„ì›Œì§„ë‹¤. 
 	int ar1Len,  ar2Len, ar3Len, i;
 	
-	printf("arr1ÀÇ Å©±â: %d \n", sizeof(arr1));
-	printf("arr2ÀÇ Å©±â: %d \n", sizeof(arr2));
-	printf("arr3ÀÇ Å©±â: %d \n", sizeof(arr3));
+	printf("arr1ì˜ í¬ê¸°: %d \n", sizeof(arr1));
+	printf("arr2ì˜ í¬ê¸°: %d \n", sizeof(arr2));
+	printf("arr3ì˜ í¬ê¸°: %d \n", sizeof(arr3));
 	
-	ar1Len = sizeof(arr1) / sizeof(int); // ¹è¿­ ¾î·¹ÀÌ1ÀÇ ±æÀÌ °è»ê 4¹ÙÀÌÆ®ÀÎ ÀÎÆ®·Î ³ª´«´Ù. 
+	ar1Len = sizeof(arr1) / sizeof(int); // ë°°ì—´ ì–´ë ˆì´1ì˜ ê¸¸ì´ ê³„ì‚° 4ë°”ì´íŠ¸ì¸ ì¸íŠ¸ë¡œ ë‚˜ëˆˆë‹¤. 
 	ar2Len = sizeof(arr2) / sizeof(int);
 	ar3Len = sizeof(arr3) / sizeof(int);
 	
@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
 	printf("\n");
 	printf("\n");
 	
-	// ¿¬½À: ÆÄ¿ö·¹ÀÎÀú °ø°Ý·Â ÃøÁ¤
+	// ì—°ìŠµ: íŒŒì›Œë ˆì¸ì € ê³µê²©ë ¥ ì¸¡ì •
 	int ranger_power[5]={100, 80, 90, 70, 60};
 	int o=0;
 	float total_damage=0;
@@ -71,31 +71,31 @@ int main(int argc, char *argv[]) {
 	printf("total_damage = %f \n", total_damage);
 	printf("average_damage = %f \n\n", average_damage);
 	
-	// charÇü ¹è¿­ÀÇ ¹®ÀÚ¿­ ÀúÀå°ú ³Î ¹®ÀÚ
-	char str[14] = "good morning!"; // ¹è¿­: good morning!\0 
-	printf("¹è¿­ strÀÇ Å©±â : %d \n", sizeof(str));
-	printf("³Î ¹®ÀÚ ¹®ÀÚÇü Ãâ·Â : %c \n", str[13]);
-	printf("³Î ¹®ÀÚ ¼ýÀÚÇü Ãâ·Â : %d \n", str[13]);
-	str[12]='?'; // ¹®ÀÚ¿­ µ¥ÀÌÅÍ º¯°æ°¡´É!  
-	printf("12¹øÂ° ¹®ÀÚ´Â?: %c \n", str[12]);
-	printf("ÁÁÀº¾ÆÄ§?: %s \n\n", str);	
+	// charí˜• ë°°ì—´ì˜ ë¬¸ìžì—´ ì €ìž¥ê³¼ ë„ ë¬¸ìž
+	char str[14] = "good morning!"; // ë°°ì—´: good morning!\0 
+	printf("ë°°ì—´ strì˜ í¬ê¸° : %d \n", sizeof(str));
+	printf("ë„ ë¬¸ìž ë¬¸ìží˜• ì¶œë ¥ : %c \n", str[13]);
+	printf("ë„ ë¬¸ìž ìˆ«ìží˜• ì¶œë ¥ : %d \n", str[13]);
+	str[12]='?'; // ë¬¸ìžì—´ ë°ì´í„° ë³€ê²½ê°€ëŠ¥!  
+	printf("12ë²ˆì§¸ ë¬¸ìžëŠ”?: %c \n", str[12]);
+	printf("ì¢‹ì€ì•„ì¹¨?: %s \n\n", str);	
 	
-	// ³Î¹®ÀÚ ÀÔ·Â¹Þ±â? 
+	// ë„ë¬¸ìž ìž…ë ¥ë°›ê¸°? 
 	/*
 	char string[50];
 	int idx=0;
 	
-	printf("¹®ÀÚ¿­ ÀÔ·Â: "); // ¶ç¾î¾²±â ÇÏ¸é ÀÔ·ÂÀÌ ¾ÈµÇ³× 
+	printf("ë¬¸ìžì—´ ìž…ë ¥: "); // ë„ì–´ì“°ê¸° í•˜ë©´ ìž…ë ¥ì´ ì•ˆë˜ë„¤ 
 	scanf("%s", string);
-	printf("ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­: %s \n", string);
+	printf("ìž…ë ¥ë°›ì€ ë¬¸ìžì—´: %s \n", string);
 	for(idx=0; string[idx] != '\0'; idx++)
 	{
 
 	}
-	printf("³Î¹®ÀÚ´Â? >> %c <<\n\n", string[idx]);
+	printf("ë„ë¬¸ìžëŠ”? >> %c <<\n\n", string[idx]);
 	*/
 	
-	// ³Î ¹®ÀÚ´Â ¿Ö ÇÊ¿äÇØ? ¹®ÀÚ¿­ÀÇ ³¡À» ÆÇ´ÜÇÏ·Á°í! 
+	// ë„ ë¬¸ìžëŠ” ì™œ í•„ìš”í•´? ë¬¸ìžì—´ì˜ ëì„ íŒë‹¨í•˜ë ¤ê³ ! 
 	char null[50]="I like semiconductor programing";
 	printf("%s \n", null);
 	null[20]='\0';
@@ -105,27 +105,27 @@ int main(int argc, char *argv[]) {
 	null[1]='\0';
 	printf("%s \n", null);
 	
-	// Lv1. ¿ªÀüÀÇ ÆÄ¿ö·¹ÀÎÀú
+	// Lv1. ì—­ì „ì˜ íŒŒì›Œë ˆì¸ì €
 	int power[5];
 	int p=0;
 	
 	for(p=0; p<5; p++)
 	{
-		if(p==0) printf("·¹µåÀÇ °ø°Ý·Â: ");
-		if(p==1) printf("ºí·çÀÇ °ø°Ý·Â: ");
-		if(p==2) printf("¿»·ÎÀÇ °ø°Ý·Â: ");
-		if(p==3) printf("±×¸°ÀÇ °ø°Ý·Â: ");
-		if(p==4) printf("ÇÎÅ©ÀÇ °ø°Ý·Â: ");
+		if(p==0) printf("ë ˆë“œì˜ ê³µê²©ë ¥: ");
+		if(p==1) printf("ë¸”ë£¨ì˜ ê³µê²©ë ¥: ");
+		if(p==2) printf("ì˜ë¡œì˜ ê³µê²©ë ¥: ");
+		if(p==3) printf("ê·¸ë¦°ì˜ ê³µê²©ë ¥: ");
+		if(p==4) printf("í•‘í¬ì˜ ê³µê²©ë ¥: ");
 		scanf(" %d", &power[p]);
 	}
-	printf("ÇÎÅ©, ±×¸°, ¿»·Î, ºí·ç, ·¹µåÀÇ °ø°Ý·Â: ");
+	printf("í•‘í¬, ê·¸ë¦°, ì˜ë¡œ, ë¸”ë£¨, ë ˆë“œì˜ ê³µê²©ë ¥: ");
 	for(p=4; p>=0; p--)
 	{
 		printf("%d ", power[p]);
 	}
 	printf("\n");
 	
-	// Lv2. ¸í¿¹ÀÇ Àü´ç(ÃÖ°í °ø°Ý·Â ·¹ÀÎÀú Ã£±â) power ¹è¿­ ±×´ë·Î È°¿ë 
+	// Lv2. ëª…ì˜ˆì˜ ì „ë‹¹(ìµœê³  ê³µê²©ë ¥ ë ˆì¸ì € ì°¾ê¸°) power ë°°ì—´ ê·¸ëŒ€ë¡œ í™œìš© 
 	int max_power=0;
 	int mvp_idx=0;
 	
@@ -137,31 +137,31 @@ int main(int argc, char *argv[]) {
 		mvp_idx = p;
 		}
 	}
-	if(mvp_idx == 0) printf("ÃÖ°í °ø°Ý·ÂÀÎ ·¹µå: %d \n", max_power);
-	else if(mvp_idx == 1) printf("ÃÖ°í °ø°Ý·ÂÀÎ ºí·ç: %d \n", max_power);
-	else if(mvp_idx == 2) printf("ÃÖ°í °ø°Ý·ÂÀÎ ¿»·Î: %d \n", max_power);
-	else if(mvp_idx == 3) printf("ÃÖ°í °ø°Ý·ÂÀÎ ±×¸°: %d \n", max_power);
-	else if(mvp_idx == 4) printf("ÃÖ°í °ø°Ý·ÂÀÎ ÇÎÅ©: %d \n", max_power);
+	if(mvp_idx == 0) printf("ìµœê³  ê³µê²©ë ¥ì¸ ë ˆë“œ: %d \n", max_power);
+	else if(mvp_idx == 1) printf("ìµœê³  ê³µê²©ë ¥ì¸ ë¸”ë£¨: %d \n", max_power);
+	else if(mvp_idx == 2) printf("ìµœê³  ê³µê²©ë ¥ì¸ ì˜ë¡œ: %d \n", max_power);
+	else if(mvp_idx == 3) printf("ìµœê³  ê³µê²©ë ¥ì¸ ê·¸ë¦°: %d \n", max_power);
+	else if(mvp_idx == 4) printf("ìµœê³  ê³µê²©ë ¥ì¸ í•‘í¬: %d \n", max_power);
 	 
-	// Lv3. ¾ÏÈ£ ÇØµ¶±â(¹®ÀÚÀÇ ´ë¼Ò¹®ÀÚ º¯È¯) 
+	// Lv3. ì•”í˜¸ í•´ë…ê¸°(ë¬¸ìžì˜ ëŒ€ì†Œë¬¸ìž ë³€í™˜) 
 	char msg[100];
 	int w=0;
 	
-	printf("¿µ´Ü¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä(°ø¹é ±ÝÁö): ");
+	printf("ì˜ë‹¨ì–´ë¥¼ ìž…ë ¥í•˜ì„¸ìš”(ê³µë°± ê¸ˆì§€): ");
 	scanf("%s", msg);
 	
 	for(w=0; msg[w] != '\0'; w++)
 	{
-		if(msg[w] >= 97 && msg[w] <= 122) // ¾Æ½ºÅ° ÄÚµå ¼Ò¹®ÀÚ´Â 97~122 
+		if(msg[w] >= 97 && msg[w] <= 122) // ì•„ìŠ¤í‚¤ ì½”ë“œ ì†Œë¬¸ìžëŠ” 97~122 
 		{
 			msg[w] -= 32;
 		}
-		else if(msg[w] >= 65 && msg[w] <= 90) // ¾Æ½ºÅ° ÄÚµå ´ë¹®ÀÚ´Â 65~90 
+		else if(msg[w] >= 65 && msg[w] <= 90) // ì•„ìŠ¤í‚¤ ì½”ë“œ ëŒ€ë¬¸ìžëŠ” 65~90 
 		{
 			msg[w] += 32;
 		}
 	}
-	printf("ÇØµ¶µÈ ¹®ÀÚ: %s \n", msg);
+	printf("í•´ë…ëœ ë¬¸ìž: %s \n", msg);
 
 	return 0;
 }
