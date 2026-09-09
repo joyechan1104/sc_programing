@@ -188,9 +188,3 @@ int main()
 	main6();
 	main7();
 }
-
-
-
-
-
-
