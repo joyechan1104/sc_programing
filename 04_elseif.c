@@ -6,30 +6,30 @@
 int main(int argc, char *argv[]) {
 	// 4week
 	int num;
-	printf("¾ç¼ö? ÀÀ¼ö?: ");
+	printf("ì–‘ìˆ˜? ì‘ìˆ˜?: ");
 	scanf("%d", &num);
 	
 	if (num<0){
-		printf("À½¼öµ¥½º³×");
+		printf("ìŒìˆ˜ë°ìŠ¤ë„¤");
 	} 
 	else if (num==0){
-		printf("0ÀÔ´Ï´Ù¶÷Áã");
+		printf("0ì…ë‹ˆë‹¤ëŒì¥");
 	}
 	else{
-		printf("¾ç¼öµ¥½º³×");
+		printf("ì–‘ìˆ˜ë°ìŠ¤ë„¤");
 	}
 	printf("\n");
 	
-	//ÇĞÁ¡°è»ê±â
+	//í•™ì ê³„ì‚°ê¸°
 	int chukan, kimatu;
 	int score;
-	printf("Áß°£°í»ç: ");
+	printf("ì¤‘ê°„ê³ ì‚¬: ");
 	scanf("%d", &chukan);
-	printf("±â¸»°í»ç: ");
+	printf("ê¸°ë§ê³ ì‚¬: ");
 	scanf("%d", &kimatu);
 	score = chukan + kimatu;
 	if (score>100 || score<0){
-		printf("Á¡¼öÀÔ·ÂÀÌ ÀÌ»óÇÏµ¥½º\n");
+		printf("ì ìˆ˜ì…ë ¥ì´ ì´ìƒí•˜ë°ìŠ¤\n");
 	}
 	else if (score>=95){
 		printf("A+");
@@ -50,54 +50,29 @@ int main(int argc, char *argv[]) {
 		printf("C");
 	}
 	else {
-		printf("³Í ±×³É Àç¼ö°­ ÇØ¶ó\n");
+		printf("ë„Œ ê·¸ëƒ¥ ì¬ìˆ˜ê°• í•´ë¼\n");
 	}
 	
-	//Àı´ñ°ª °è»ê±â
+	//ì ˆëŒ“ê°’ ê³„ì‚°ê¸°
 	int decimal;
-	printf("Àı´ñ°ª°è»ê¼öÀÔ·Â: ") ;
+	printf("ì ˆëŒ“ê°’ê³„ì‚°ìˆ˜ì…ë ¥: ") ;
 	scanf("%d", &decimal);
 	int result = (decimal>0) ? decimal:decimal*-1;
-	printf("ÀÔ·ÂÇÑ ¼öÀÇ Àı´ñ°ª: %d \n", result);
+	printf("ì…ë ¥í•œ ìˆ˜ì˜ ì ˆëŒ“ê°’: %d \n", result);
 	
-	// ÆíÀÇÁ¡ ´ã¹è ±¸¸Å °¡´É¿©ºÎ
+	// í¸ì˜ì  ë‹´ë°° êµ¬ë§¤ ê°€ëŠ¥ì—¬ë¶€
 	int age;
 	printf("how old you? : ");
 	scanf("%d", &age);
-	printf("%s", (age>=20) ? "±¸¸Å°¡´É":"³Í²¿¸ÍÀÌ");
+	printf("%s", (age>=20) ? "êµ¬ë§¤ê°€ëŠ¥":"ë„Œê¼¬ë§¹ì´");
 	printf("\n\n");
 	
-	// ¿À´Ã ¹¹ ¸ÔÁö?
+	// ì˜¤ëŠ˜ ë­ ë¨¹ì§€?
 	int money;
-	printf("³ª ¾ó¸¶ÀÖÁö? : ");
+	printf("ë‚˜ ì–¼ë§ˆìˆì§€? : ");
 	scanf("%d", &money);
-	printf("¿ø \n");
-	printf("±×·³ %s¾ß°Ú³× \n", (money>=15000) ? "½ºÅ×ÀÌÅ©»ç¸Ô¾î":(money>=8000) ? "Á¦À°ººÀ½»ç¸Ô¾î":(money>=1000) ? "ÆíÀÇÁ¡¶ó¸é»ç¸Ô¾î":(money<0) ? "°ü¼Ó¿¡µé¾î°¡":"±¾¾î"); 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	printf("ì› \n");
+	printf("ê·¸ëŸ¼ %sì•¼ê² ë„¤ \n", (money>=15000) ? "ìŠ¤í…Œì´í¬ì‚¬ë¨¹ì–´":(money>=8000) ? "ì œìœ¡ë³¶ìŒì‚¬ë¨¹ì–´":(money>=1000) ? "í¸ì˜ì ë¼ë©´ì‚¬ë¨¹ì–´":(money<0) ? "ê´€ì†ì—ë“¤ì–´ê°€":"êµ¶ì–´"); 
 	
 	return 0;
 }
