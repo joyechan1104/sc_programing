@@ -1,49 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Å¸ÀÌÇÇµ¥ÇÁ ¼±¾ğ 
-typedef struct battery // Phone·Î Á¤ÀÇµÇ±â¿¡ ±¸Á¶Ã¼ÀÌ¸§Àº ÀÇ¹Ì°¡ ¾ø´Ù µû¶ó¼­ battery¸¦ Áö¿öµµ ¹«¹æÇÏ´Ù. 
+// íƒ€ì´í”¼ë°í”„ ì„ ì–¸ 
+typedef struct battery // Phoneë¡œ ì •ì˜ë˜ê¸°ì— êµ¬ì¡°ì²´ì´ë¦„ì€ ì˜ë¯¸ê°€ ì—†ë‹¤ ë”°ë¼ì„œ batteryë¥¼ ì§€ì›Œë„ ë¬´ë°©í•˜ë‹¤. 
 {
 	int percent;
 	int health;
-} Phone; // struct battery °¡ Phone·Î Ä¡È¯µÈ´Ù. 
+} Phone; // struct battery ê°€ Phoneë¡œ ì¹˜í™˜ëœë‹¤. 
 
 int main1() 
 {
 	Phone Galaxy = {70, 98};
 	Phone Iphone = {50, 65};
-	printf("°¶·°½ÃÀÇ ÇöÀç ÃæÀü·®: %d%%, ¹èÅÍ¸® È¿À²%d%% \n", Galaxy.percent, Galaxy.health);
-	printf("¾ÆÀÌÆùÀÇ ÇöÀç ÃæÀü·®: %d%%, ¹èÅÍ¸® È¿À²%d%% \n", Iphone.percent, Iphone.health);
+	printf("ê°¤ëŸ­ì‹œì˜ í˜„ì¬ ì¶©ì „ëŸ‰: %d%%, ë°°í„°ë¦¬ íš¨ìœ¨%d%% \n", Galaxy.percent, Galaxy.health);
+	printf("ì•„ì´í°ì˜ í˜„ì¬ ì¶©ì „ëŸ‰: %d%%, ë°°í„°ë¦¬ íš¨ìœ¨%d%% \n", Iphone.percent, Iphone.health);
 	return 0;
 }
 
-// ÇÔ¼öÀÇ ÀÎÀÚ·Î Àü´ŞµÇ°í return¹®¿¡ ÀÇÇØ ¹İÈ¯µÇ´Â ±¸Á¶Ã¼ Ä¡Å² 
+// í•¨ìˆ˜ì˜ ì¸ìë¡œ ì „ë‹¬ë˜ê³  returnë¬¸ì— ì˜í•´ ë°˜í™˜ë˜ëŠ” êµ¬ì¡°ì²´ ì¹˜í‚¨ 
 typedef struct chicken
 {
-	int price; // °¡°İ 
-	int dc; // ÇÒÀÎ 
+	int price; // ê°€ê²© 
+	int dc; // í• ì¸ 
 } chicken;
 
-void showReceipt(chicken fride) // 3. ¿À´õÄ¡Å²ÀÌ ¹İÈ¯µÇ°í ÇÁ¶óÀÌµåÄ¡Å²ÀÌ È£Ãâ, ¸ŞÀÎÇÔ¼ö¿¡¼­ myOrder±¸Á¶Ã¼°¡ ´ëÀÔµÈ´Ù. 
+void showReceipt(chicken fride) // 3. ì˜¤ë”ì¹˜í‚¨ì´ ë°˜í™˜ë˜ê³  í”„ë¼ì´ë“œì¹˜í‚¨ì´ í˜¸ì¶œ, ë©”ì¸í•¨ìˆ˜ì—ì„œ myOrderêµ¬ì¡°ì²´ê°€ ëŒ€ì…ëœë‹¤. 
 {
-	printf("=== ¿µ¼öÁõ === \n");
-	printf("Ä¡Å²°¡°İ: %d¿ø \n", fride.price);
-	printf("ÄíÆùÇÒÀÎ: %d¿ø \n", fride.dc);
-	printf("ÃÖÁ¾°¡°İ: %d¿ø \n", fride.price - fride.dc);
+	printf("=== ì˜ìˆ˜ì¦ === \n");
+	printf("ì¹˜í‚¨ê°€ê²©: %dì› \n", fride.price);
+	printf("ì¿ í°í• ì¸: %dì› \n", fride.dc);
+	printf("ìµœì¢…ê°€ê²©: %dì› \n", fride.price - fride.dc);
 }
 
-chicken orderChicken(void) // 2.¿À´õ Ä¡Å²ÀÌ È£ÃâµÊ 
+chicken orderChicken(void) // 2.ì˜¤ë” ì¹˜í‚¨ì´ í˜¸ì¶œë¨ 
 {
-	chicken app; // ÀÔ·Â¹ŞÀ» ¾Û ±¸Á¶Ã¼ »ı¼º ¿À´õ Ä¡Å² Á¾·á½Ã ¼Ò¸ê 
-	printf("¹è´Ş Ä¡Å² °¡°İ°ú ÇÒÀÎ°¡°İÀ» Á¤ÇØÁÖ¼¼¿ä (°¡°İ-ÇÒÀÎ°¡): ");
+	chicken app; // ì…ë ¥ë°›ì„ ì•± êµ¬ì¡°ì²´ ìƒì„± ì˜¤ë” ì¹˜í‚¨ ì¢…ë£Œì‹œ ì†Œë©¸ 
+	printf("ë°°ë‹¬ ì¹˜í‚¨ ê°€ê²©ê³¼ í• ì¸ê°€ê²©ì„ ì •í•´ì£¼ì„¸ìš” (ê°€ê²©-í• ì¸ê°€): ");
 	scanf("%d %d", &app.price, &app.dc);
-	return app; // appÀÇ °ªÀ» ¸ŞÀÎÇÔ¼ö·Î ¹İÈ¯ 
+	return app; // appì˜ ê°’ì„ ë©”ì¸í•¨ìˆ˜ë¡œ ë°˜í™˜ 
 }
 
-int main(void) // 1.½ÃÀÛºÎ 
+int main(void) // 1.ì‹œì‘ë¶€ 
 {
-	chicken myOrder = orderChicken(); // orderChickenÀÇ ¹İÈ¯°ªÀÌ ±¸Á¶Ã¼ myOrder¿¡ ´ëÀÔµÈ´Ù.
-	showReceipt(myOrder); // ÀüÁÙ¿¡¼­ ´ëÀÔµÈ ±¸Á¶Ã¼ myOrderÀÌ showReceiptÀÇ fride±¸Á¶Ã¼¿¡ ´ëÀÔ 
+	chicken myOrder = orderChicken(); // orderChickenì˜ ë°˜í™˜ê°’ì´ êµ¬ì¡°ì²´ myOrderì— ëŒ€ì…ëœë‹¤.
+	showReceipt(myOrder); // ì „ì¤„ì—ì„œ ëŒ€ì…ëœ êµ¬ì¡°ì²´ myOrderì´ showReceiptì˜ frideêµ¬ì¡°ì²´ì— ëŒ€ì… 
 } 
 
 
