@@ -5,28 +5,28 @@
 
 int main(int argc, char *argv[]) {
 	int test=70, sstd=15;
-	printf("¼ö¾÷¸í: ¹İµµÃ¼ ÇÁ·Î±×·¡¹Ö½Ç½À\n ´ã´ç±³¼ö: ÀåÀÍ¼ö\n Æò°¡¹æ¹ı: ±â¸»%d Ãâ¼®%d ÅÂµµ%d\n", test, sstd, sstd);
+	printf("ìˆ˜ì—…ëª…: ë°˜ë„ì²´ í”„ë¡œê·¸ë˜ë°ì‹¤ìŠµ\n ë‹´ë‹¹êµìˆ˜: ì¥ìµìˆ˜\n í‰ê°€ë°©ë²•: ê¸°ë§%d ì¶œì„%d íƒœë„%d\n", test, sstd, sstd);
 	/*
-	\nÀº ÀÌ½ºÄÉÀÌÇÁ ½ÃÄö½º·Î °³ÇàÀ» ÀÇ¹ÌÇÑ´Ù
-	%d´Â decimal·Î 10Áø¼ö·Î Ãâ·ÂÇÒ¶§ »ç¿ëÇÑ´Ù 
+	\nì€ ì´ìŠ¤ì¼€ì´í”„ ì‹œí€€ìŠ¤ë¡œ ê°œí–‰ì„ ì˜ë¯¸í•œë‹¤
+	%dëŠ” decimalë¡œ 10ì§„ìˆ˜ë¡œ ì¶œë ¥í• ë•Œ ì‚¬ìš©í•œë‹¤ 
 	*/
-	int num1, num2, num3=30, num4=40; // ³Ñ1 ÁÖ¼¼¿ä ºĞ¾ç¹ŞÀº ´À³¦! 
+	int num1, num2, num3=30, num4=40; // ë„˜1 ì£¼ì„¸ìš” ë¶„ì–‘ë°›ì€ ëŠë‚Œ! 
 	printf("num1: %d, num2: %d, num3: %d, num4: %d\n",num1,num2,num3,num4);
-	num1=10, num2=20, num3=33,num4=44; // ÀÌ¹Ì ¹ŞÀº°Å¶ó¼­  int·Î º¯¼ö¼±¾ğ ÇÒ ÇÊ¿ä°¡ ¾ø³× 
+	num1=10, num2=20, num3=33,num4=44; // ì´ë¯¸ ë°›ì€ê±°ë¼ì„œ  intë¡œ ë³€ìˆ˜ì„ ì–¸ í•  í•„ìš”ê°€ ì—†ë„¤ 
 	printf("num1: %d, num2: %d, num3: %d, num4: %d\n",num1,num2,num3,num4);
 	
 	int num5=19, num6=2;
-	printf("+°è»ê: %d + %d = %d \n",num5,num6,num5+num6); 
-	printf("-°è»ê: %d - %d = %d \n",num5,num6,num5-num6); 
-	printf("x°è»ê: %d x %d = %d \n",num5,num6,num5*num6); 
-	printf("/³ª´©±â°è»ê: %d ³ª´©±â %d ¸ò= %d \n",num5,num6,num5/num6); 
-	printf("%³ª¸ÓÁö°è»ê: %d ³ª´©±â %d ³ª¸ÓÁö= %d \n",num5,num6,num5%num6); 
+	printf("+ê³„ì‚°: %d + %d = %d \n",num5,num6,num5+num6); 
+	printf("-ê³„ì‚°: %d - %d = %d \n",num5,num6,num5-num6); 
+	printf("xê³„ì‚°: %d x %d = %d \n",num5,num6,num5*num6); 
+	printf("/ë‚˜ëˆ„ê¸°ê³„ì‚°: %d ë‚˜ëˆ„ê¸° %d ëª«= %d \n",num5,num6,num5/num6); 
+	printf("%ë‚˜ë¨¸ì§€ê³„ì‚°: %d ë‚˜ëˆ„ê¸° %d ë‚˜ë¨¸ì§€= %d \n",num5,num6,num5%num6); 
 	
-	int num7=(++num1)+2, num8=(num2--)-2; //¿¹»ó 13, 18 
+	int num7=(++num1)+2, num8=(num2--)-2; //ì˜ˆìƒ 13, 18 
 	printf("%d, %d \n",num7++,num8); 
 	printf("%d, %d \n\n",num7,--num8); 
 	
-	// result´Â °ü½ÀÀûÀ¸·Î  °è»êÀÌ³ª Ã³¸®ÀÇ ÃÖÁ¾ °á°ú¹°À» ´ã´Â ±×¸©À¸·Î ¾²ÀÎ´Ù
+	// resultëŠ” ê´€ìŠµì ìœ¼ë¡œ  ê³„ì‚°ì´ë‚˜ ì²˜ë¦¬ì˜ ìµœì¢… ê²°ê³¼ë¬¼ì„ ë‹´ëŠ” ê·¸ë¦‡ìœ¼ë¡œ ì“°ì¸ë‹¤
 	int result1=num1<num2; 
 	int result2=num1>num2;
 	int result3=num1==num2;
@@ -44,9 +44,9 @@ int main(int argc, char *argv[]) {
 	result7=(num3==33 && num4==44); //AND
 	result8=(num3==30 || num4==44); //OR
 	result9=(! num3==33); //NOT
-	printf("AND¿¬»ê: %d \n", result7);
-	printf("OR¿¬»ê: %d \n", result8);
-	printf("NOT¿¬»ê: %d \n", result9);	
+	printf("ANDì—°ì‚°: %d \n", result7);
+	printf("ORì—°ì‚°: %d \n", result8);
+	printf("NOTì—°ì‚°: %d \n", result9);	
 	
 	int num10, num11;
 	printf("number1: "); 
