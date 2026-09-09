@@ -4,7 +4,7 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	// break¹® 
+	// breakë¬¸ 
 	int sum=0, num=0;
 	
 	while(1)
@@ -19,22 +19,22 @@ int main(int argc, char *argv[]) {
 	printf("sum: %d \n", sum);
 	printf("sum: %d \n", num);
 	
-	// ÀÚÆÇ±â °Å½º¸§µ·
+	// ìžíŒê¸° ê±°ìŠ¤ë¦„ëˆ
 	int totalcharge=800;
 	
 	while(totalcharge>0)
 	{
 		if(totalcharge<=300)
 		{
-			printf("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù. \n");
+			printf("ìž”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤. \n");
 			break;
 		}
-		totalcharge-=100; // -100À» ÇÏ¸é °è»ê¸¸ ÇÏ°í ÀúÀåÀ» ¾ÈÇÑ´Ù. -=100À¸·Î ÇØÁà¾ß ÀúÀåÀ» ÇÑ´Ù.
-		printf("100¿øÀ» °Å½½·¯ Áá½À´Ï´Ù. ³²Àº±Ý¾×: %d \n", totalcharge); 
+		totalcharge-=100; // -100ì„ í•˜ë©´ ê³„ì‚°ë§Œ í•˜ê³  ì €ìž¥ì„ ì•ˆí•œë‹¤. -=100ìœ¼ë¡œ í•´ì¤˜ì•¼ ì €ìž¥ì„ í•œë‹¤.
+		printf("100ì›ì„ ê±°ìŠ¬ëŸ¬ ì¤¬ìŠµë‹ˆë‹¤. ë‚¨ì€ê¸ˆì•¡: %d \n", totalcharge); 
 	} 
-	printf("½ÇÇà Á¾·á.");
+	printf("ì‹¤í–‰ ì¢…ë£Œ.");
 	
-	//cuntinue¹®
+	//cuntinueë¬¸
 	int n1;
 	printf("start! \n");
 	for(n1=1; n1<50; n1++)
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 	} 
 	printf("end \n");
 	
-	//·°Å°¹Ú½º Æ÷Àå ½Ã½ºÅÛ 
+	//ëŸ­í‚¤ë°•ìŠ¤ í¬ìž¥ ì‹œìŠ¤í…œ 
 	int lucky=0;
 	
 	printf("start! \n");
@@ -55,52 +55,52 @@ int main(int argc, char *argv[]) {
 	{
 		if(lucky==4 || lucky==7)
 		{
-			printf("%d¹ø ¹Ú½º ¿À·ù ¹ß»ý \n", lucky);
+			printf("%dë²ˆ ë°•ìŠ¤ ì˜¤ë¥˜ ë°œìƒ \n", lucky);
 			continue;
 		}
-		printf("%d¹ø ¹Ú½º \n",lucky);
+		printf("%dë²ˆ ë°•ìŠ¤ \n",lucky);
 	} 
 	printf("end \n");
 	printf("\n");
 	
-	// ÀÚÆÇ±â À½·á¼ö ¼±ÅÃ
+	// ìžíŒê¸° ìŒë£Œìˆ˜ ì„ íƒ
 	int choice;
-	printf("ÀÚÆÇ±â À½·á¸¦ °ñ¶óÁÖ¼¼¿ä \n 1¹ø: ÄÝ¶ó 2¹ø: »çÀÌ´Ù 3¹ø: È¯Å¸ \n 4¹ø: ¹ÐÅ°½º 5¹ø: »ý¼ö ±×¿Ü: ¿À·ù\n ¼±ÅÃ: ");
+	printf("ìžíŒê¸° ìŒë£Œë¥¼ ê³¨ë¼ì£¼ì„¸ìš” \n 1ë²ˆ: ì½œë¼ 2ë²ˆ: ì‚¬ì´ë‹¤ 3ë²ˆ: í™˜íƒ€ \n 4ë²ˆ: ë°€í‚¤ìŠ¤ 5ë²ˆ: ìƒìˆ˜ ê·¸ì™¸: ì˜¤ë¥˜\n ì„ íƒ: ");
 	scanf("%d", &choice);
 	switch(choice)
 	{
 		case 1:
-			printf("ÄÝ¶ó°¡ ³ª¿Ô½À´Ï´Ù. \n");
+			printf("ì½œë¼ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤. \n");
 			break;
 		case 2:
-			printf("»çÀÌ´Ù°¡ ³ª¿Ô½À´Ï´Ù. \n");
+			printf("ì‚¬ì´ë‹¤ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤. \n");
 			break;
 		case 3:
-			printf("È¯Å¸°¡ ³ª¿Ô½À´Ï´Ù. \n");
+			printf("í™˜íƒ€ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤. \n");
 			break;
 		case 4:
-			printf("¹ÐÅ°½º°¡ ³ª¿Ô½À´Ï´Ù. \n");
+			printf("ë°€í‚¤ìŠ¤ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤. \n");
 			break;
 		case 5:
-			printf("»ý¼ö°¡ ³ª¿Ô½À´Ï´Ù. \n");
+			printf("ìƒìˆ˜ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤. \n");
 			break;
 		default:
-			printf("¾Æ¹«°Íµµ ¾È ³ª¿Ô¾î. \n");
+			printf("ì•„ë¬´ê²ƒë„ ì•ˆ ë‚˜ì™”ì–´. \n");
 	} 
 	printf("\n");
 	
-	//½º¸¶Æ® Ä«Æä Å°¿À½ºÅ©
+	//ìŠ¤ë§ˆíŠ¸ ì¹´íŽ˜ í‚¤ì˜¤ìŠ¤í¬
 	char coffee=0;
 	char size=0;
 	int price=3000;
 	
-	printf("Ä¿ÇÇ Á¾·ù¸¦ °ñ¶óÁÖ¼¼¿ä A. Americano: 3000won \n B. cafelatte: 3500won C. cafemoka: 4000won \n ÁÖ¹®À» ÀÔ·ÂÇÏ¼¼¿ä ¿µ¹®A or B or C: ");
+	printf("ì»¤í”¼ ì¢…ë¥˜ë¥¼ ê³¨ë¼ì£¼ì„¸ìš” A. Americano: 3000won \n B. cafelatte: 3500won C. cafemoka: 4000won \n ì£¼ë¬¸ì„ ìž…ë ¥í•˜ì„¸ìš” ì˜ë¬¸A or B or C: ");
 	scanf(" %c", &coffee);
-	printf("Ä¿ÇÇ »çÀÌÁî¸¦ °ñ¶óÁÖ¼¼¿ä S: standard/ L: large +500won \n »çÀÌÁî¸¦ ¼±ÅÃÇØ¼¼¿ä S or L: ");
-	scanf(" %c", &size); // &ÀØÀ»·¡?
+	printf("ì»¤í”¼ ì‚¬ì´ì¦ˆë¥¼ ê³¨ë¼ì£¼ì„¸ìš” S: standard/ L: large +500won \n ì‚¬ì´ì¦ˆë¥¼ ì„ íƒí•´ì„¸ìš” S or L: ");
+	scanf(" %c", &size); // &ìžŠì„ëž˜?
 	switch(coffee)
 	{
-		case 'A': case 'a': // ¹®ÀÚ¿¡ ''¸¦ ¾ÈºÙÀÌ¸é ÄÄÇ»ÅÍ´Â ÀÎ½ÄÀ» ¸øÇÑ´Ù 
+		case 'A': case 'a': // ë¬¸ìžì— ''ë¥¼ ì•ˆë¶™ì´ë©´ ì»´í“¨í„°ëŠ” ì¸ì‹ì„ ëª»í•œë‹¤ 
 		break;
 		case 'B': case 'b':
 			price+=500;
@@ -109,30 +109,15 @@ int main(int argc, char *argv[]) {
 			price+=1000;
 		break;
 		default:
-		printf("¸Þ´º ¿À·ùÀÔ´Ï´Ù Á¾·áÇÕ´Ï´Ù."); 
+		printf("ë©”ë‰´ ì˜¤ë¥˜ìž…ë‹ˆë‹¤ ì¢…ë£Œí•©ë‹ˆë‹¤."); 
 	}
-	if(size=='l'||size=='L') // ºñ±³¿¬»êÀÚ == À» ½á¾ßÇØ, ´ëÀÔ¿¬»êÀÚ = À» ¾²¸é µÉ¸®°¡¾øÁö
+	if(size=='l'||size=='L') // ë¹„êµì—°ì‚°ìž == ì„ ì¨ì•¼í•´, ëŒ€ìž…ì—°ì‚°ìž = ì„ ì“°ë©´ ë ë¦¬ê°€ì—†ì§€
 		{
-			price+=500; // if(size=='l'||'L') ÀÌ»óÅÂ¸é LÀÇ ¾Æ½ºÅ°ÄÚµå´Â 0ÀÌ ¾Æ´Ï´Ï±î Ç×»ó ÂüÀ¸·Î º¯ÇÔ 
-			printf("»çÀÌÁî ¾÷±×·¹ÀÌµå¸¦ ÁøÇàÇÕ´Ï´Ù \n");
-		} // continueÀº ¿ÍÀÏ¹® Æú¹® ¾ÈÀÌ ¾Æ´Ï¸é »ç¿ëÀÌ ºÒ°¡´É ÇÏ´Ù. 
-	printf("°¡°ÝÀº %d¿ø ÀÔ´Ï´Ù. °Å½º¸§µ·Àº ¾ø½À´Ï´Ù. \n", price);
+			price+=500; // if(size=='l'||'L') ì´ìƒíƒœë©´ Lì˜ ì•„ìŠ¤í‚¤ì½”ë“œëŠ” 0ì´ ì•„ë‹ˆë‹ˆê¹Œ í•­ìƒ ì°¸ìœ¼ë¡œ ë³€í•¨ 
+			printf("ì‚¬ì´ì¦ˆ ì—…ê·¸ë ˆì´ë“œë¥¼ ì§„í–‰í•©ë‹ˆë‹¤ \n");
+		} // continueì€ ì™€ì¼ë¬¸ í´ë¬¸ ì•ˆì´ ì•„ë‹ˆë©´ ì‚¬ìš©ì´ ë¶ˆê°€ëŠ¥ í•˜ë‹¤. 
+	printf("ê°€ê²©ì€ %dì› ìž…ë‹ˆë‹¤. ê±°ìŠ¤ë¦„ëˆì€ ì—†ìŠµë‹ˆë‹¤. \n", price);
 	printf("\n");
 	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	return 0;
 }
