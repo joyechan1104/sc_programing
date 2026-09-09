@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h> // ½Ã°£ 
+#include <windows.h> // ì‹œê°„ 
 
 int main1() 
 {
 	
 	int num1, num2;
 	num1=printf("12345\n");
-	num2=printf("i love my home\n"); // ¹®ÀÚ¿­ ±æÀÌ:14 + \n 1 = 15 
+	num2=printf("i love my home\n"); // ë¬¸ìì—´ ê¸¸ì´:14 + \n 1 = 15 
 	printf("%d %d \n", num1, num2);
 	
-	int sum(int a, int b) // Á¤¼ö¸¦ ¸®ÅÏÇÒ°Å¾ß ±× ÇÔ¼öÀÇ ÀÌ¸§Àº sum 
+	int sum(int a, int b) // ì •ìˆ˜ë¥¼ ë¦¬í„´í• ê±°ì•¼ ê·¸ í•¨ìˆ˜ì˜ ì´ë¦„ì€ sum 
 	{
-		int c = a + b; // Á¤¼ö c¶ó´Â °ø°£À» ¸¸µé¾î ÀúÀå 
+		int c = a + b; // ì •ìˆ˜ cë¼ëŠ” ê³µê°„ì„ ë§Œë“¤ì–´ ì €ì¥ 
 		return c;
 	}
-	int data = sum(10,20); // È£ÃâÇÏ¸é ÀÏ´Ü Á¦¾î±ÇÀÌ À§·Î ¿Ã¶ó°¨ / 30À» ¸®ÅÏ 
+	int data = sum(10,20); // í˜¸ì¶œí•˜ë©´ ì¼ë‹¨ ì œì–´ê¶Œì´ ìœ„ë¡œ ì˜¬ë¼ê° / 30ì„ ë¦¬í„´ 
 	printf("%d", data);
 	printf("\n\n");
 	
 	return 0;
 }
 
-// staticÀÇ ÀÌÇØ 
+// staticì˜ ì´í•´ 
 void SimpleFunc(void)
 {
 	static int n1=0;
@@ -35,7 +35,7 @@ void SimpleFunc(void)
 int main2(void)
 {
 	int i;
-	for(i=0; i<10; i++) // i°¡ 0ºÎÅÍ ½ÃÀÛ 0~9±îÁö ¹İº¹µÇ¹Ç·Î ÃÑ 10È¸ ¹İº¹µÈ´Ù.  
+	for(i=0; i<10; i++) // iê°€ 0ë¶€í„° ì‹œì‘ 0~9ê¹Œì§€ ë°˜ë³µë˜ë¯€ë¡œ ì´ 10íšŒ ë°˜ë³µëœë‹¤.  
 	{
 		SimpleFunc();
 	}
@@ -43,7 +43,7 @@ int main2(void)
 	return 0;
 }
 
-// º¸½º·¹ÀÌµå 
+// ë³´ìŠ¤ë ˆì´ë“œ 
 void AttackBoss(void)
 {
 	static int totaldamage=0;
@@ -51,16 +51,16 @@ void AttackBoss(void)
 	static int kioku=0;
 	totaldamage+=30;
 	damage+=30;
-	printf("º¸½º¸¦ °ø°İÁß ..."); // \rÀÇ ¿µÇâÀ¸·Î 0.5ÃÊÈÄ Áö¿öÁü 
+	printf("ë³´ìŠ¤ë¥¼ ê³µê²©ì¤‘ ..."); // \rì˜ ì˜í–¥ìœ¼ë¡œ 0.5ì´ˆí›„ ì§€ì›Œì§ 
 	Sleep(500);
-	printf("\r º¸½º´Â %dÀÇ µ¥¹ÌÁö¸¦ ÀÔ¾ú½À´Ï´Ù.(ÃÑ %dµ¥¹ÌÁö) \n", damage, totaldamage);
+	printf("\r ë³´ìŠ¤ëŠ” %dì˜ ë°ë¯¸ì§€ë¥¼ ì…ì—ˆìŠµë‹ˆë‹¤.(ì´ %dë°ë¯¸ì§€) \n", damage, totaldamage);
 	if(totaldamage>=300)
 	{
-		printf("º¸½º¸¦ Ã³Ä¡Çß½À´Ï´Ù! \n YOU WIN! \n");
+		printf("ë³´ìŠ¤ë¥¼ ì²˜ì¹˜í–ˆìŠµë‹ˆë‹¤! \n YOU WIN! \n");
 	}
 	else if(totaldamage>=200 && kioku==0)
 	{
-		printf("º¸½º°¡ ±¤ÆøÈ­ ¸ğµå¿¡ ÁøÀÔÇÕ´Ï´Ù. \n");
+		printf("ë³´ìŠ¤ê°€ ê´‘í­í™” ëª¨ë“œì— ì§„ì…í•©ë‹ˆë‹¤. \n");
 		kioku=1;
 	}
 }
@@ -77,7 +77,7 @@ int main3(void)
 	return 0;
 }
 
-// Àç±ÍÇÔ¼ö 
+// ì¬ê·€í•¨ìˆ˜ 
 void Recursive(int num)
 {
 	if(num<=0)
@@ -95,10 +95,10 @@ int main4(void)
 	return;
 }
 
-// ÆøÅº µ¹¸®±â
+// í­íƒ„ ëŒë¦¬ê¸°
 void Bomb(int person)
 {
-	if (person<=1 || person==3) // ¾ğÁ¦ ÅÍÁúÁö ¼³Á¤ 
+	if (person<=1 || person==3) // ì–¸ì œ í„°ì§ˆì§€ ì„¤ì • 
 	{
 		printf("\r 3 \n");
 		Sleep(500);
@@ -106,28 +106,28 @@ void Bomb(int person)
 		Sleep(500);
 		printf("\r 1 \n");
 		Sleep(500);
-		printf("\r Æã! ÆøÅºÀÌ ÅÍÁ³½À´Ï´Ù! \n");
+		printf("\r í‘! í­íƒ„ì´ í„°ì¡ŒìŠµë‹ˆë‹¤! \n");
 		return;
 	}
-	printf("%d¹øÀÌ ÆøÅºÀ» µé°í ÀÖ½À´Ï´Ù. \n", person);
+	printf("%dë²ˆì´ í­íƒ„ì„ ë“¤ê³  ìˆìŠµë‹ˆë‹¤. \n", person);
 	Sleep(1000);
-	printf("%d¹ø »ç¶÷ÀÌ %d¹ø »ç¶÷ÇÑÅ× ÆøÅºÀ» ³Ñ±é´Ï´Ù. \n", person, person-1);
+	printf("%dë²ˆ ì‚¬ëŒì´ %dë²ˆ ì‚¬ëŒí•œí…Œ í­íƒ„ì„ ë„˜ê¹ë‹ˆë‹¤. \n", person, person-1);
 	Bomb(person-1); 
 }
 int main5(void)
 {
-	printf("ÆøÅºµ¹¸®±â °ÔÀÓ ½ÃÀÛ! \n");
-	Bomb(8); // ¸î¹øºÎÅÍ ½ÃÀÛÇÒÁö ¼³Á¤ 
+	printf("í­íƒ„ëŒë¦¬ê¸° ê²Œì„ ì‹œì‘! \n");
+	Bomb(8); // ëª‡ë²ˆë¶€í„° ì‹œì‘í• ì§€ ì„¤ì • 
 	printf("\n\n");
 	return;
 }
 
-//ÆÑÅä¸®¾ó ÇÔ¼ö
+//íŒ©í† ë¦¬ì–¼ í•¨ìˆ˜
 int Factorial(int n)
 {
 	if(n==0)
 	{
-		return 1; // ¸®ÅÏ0À» ÇÏ¸é Áö±İ±îÁöÀÇ °ª¿¡ ¸ğµÎ 0À» °öÇØ¹ö¸°´Ù ±×·¡¼­ *1ÀÎ ¸®ÅÏ1À» »ç¿ëÇØ¾ßÇÔ 
+		return 1; // ë¦¬í„´0ì„ í•˜ë©´ ì§€ê¸ˆê¹Œì§€ì˜ ê°’ì— ëª¨ë‘ 0ì„ ê³±í•´ë²„ë¦°ë‹¤ ê·¸ë˜ì„œ *1ì¸ ë¦¬í„´1ì„ ì‚¬ìš©í•´ì•¼í•¨ 
 	}
 	else
 	{
@@ -145,7 +145,7 @@ int main6(void)
 	return 0;
 }
 
-// ÄŞº¸µ¥¹ÌÁö
+// ì½¤ë³´ë°ë¯¸ì§€
 int combo(int n)
 {
 	if(n<=1)
@@ -158,19 +158,19 @@ int main7(void)
 {
 	int max_combo;
 	int i;
-	printf("ÇÊ»ì±â! ÃÖ´ë ¸î ÄŞº¸?(16combo°¡ ÃÖ´ë´ë¹ÌÁö, 35comboºÎÅÍ0): ");
+	printf("í•„ì‚´ê¸°! ìµœëŒ€ ëª‡ ì½¤ë³´?(16comboê°€ ìµœëŒ€ëŒ€ë¯¸ì§€, 35comboë¶€í„°0): ");
 	scanf("%d", &max_combo);
-	printf("\n ¿¬¼Ó °ø°İ! \n");
+	printf("\n ì—°ì† ê³µê²©! \n");
 	printf("------------------------------------- \n");
 	
 	for(i=0; i<max_combo; i++)
 	{
 		Sleep(500);
 		int damage = combo(i);
-		printf("%dÄŞº¸! %dÀÇ µ¥¹ÌÁö! \n", i+1, damage);
+		printf("%dì½¤ë³´! %dì˜ ë°ë¯¸ì§€! \n", i+1, damage);
 		if(i >= 5 && max_combo == i + 1)
 		{
-			printf("¾öÃ»³­ ¿¬°İ! \n");
+			printf("ì—„ì²­ë‚œ ì—°ê²©! \n");
 		}
 	}
 	printf("------------------------------------- \n");
@@ -188,13 +188,6 @@ int main()
 	main6();
 	main7();
 }
-
-
-
-
-
-
-
 
 
 
